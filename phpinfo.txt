@@ -1,9 +1,9 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux c49c62e9fcf7 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 20 2017 02:53:05
-Configure Command =>  './configure'  '--prefix=/usr' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
+System => Linux 06d4171266bb 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 20 2017 09:24:21
+Configure Command =>  './configure'  '--prefix=/usr' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--with-apxs2=/usr/bin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
 Server API => Command Line Interface
 Virtual Directory Support => disabled
 Configuration File (php.ini) Path => /etc
@@ -12,6 +12,7 @@ Scan this dir for additional .ini files => /etc/php.d
 Additional .ini files parsed => /etc/php.d/igbinary.ini,
 /etc/php.d/imagick.ini,
 /etc/php.d/inotify.ini,
+/etc/php.d/opcache.ini,
 /etc/php.d/redis.ini
 
 PHP API => 20160303
@@ -33,6 +34,7 @@ Registered Stream Filters => zlib.*, bzip2.*, convert.iconv.*, mcrypt.*, mdecryp
 
 This program makes use of the Zend Scripting Language Engine:
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.1.5, Copyright (c) 1999-2017, by Zend Technologies
 
 
  _______________________________________________________________________
@@ -52,7 +54,7 @@ bz2
 BZip2 Support => Enabled
 Stream Wrapper support => compress.bzip2://
 Stream Filter support => bzip2.decompress, bzip2.compress
-BZip2 Version => 1.0.5, 10-Dec-2007
+BZip2 Version => 1.0.6, 6-Sept-2010
 
 calendar
 
@@ -158,10 +160,10 @@ ctype functions => enabled
 curl
 
 cURL support => enabled
-cURL Information => 7.19.7
+cURL Information => 7.29.0
 Age => 3
 Features
-AsynchDNS => No
+AsynchDNS => Yes
 CharConv => No
 Debug => No
 GSS-Negotiate => Yes
@@ -171,14 +173,16 @@ krb4 => No
 Largefile => Yes
 libz => Yes
 NTLM => Yes
+NTLMWB => Yes
 SPNEGO => No
 SSL => Yes
 SSPI => No
-Protocols => tftp, ftp, telnet, dict, ldap, ldaps, http, file, https, ftps, scp, sftp
+TLS-SRP => No
+Protocols => dict, file, ftp, ftps, gopher, http, https, imap, imaps, ldap, ldaps, pop3, pop3s, rtsp, scp, sftp, smtp, smtps, telnet, tftp
 Host => x86_64-redhat-linux-gnu
-SSL Version => NSS/3.27.1
-ZLib Version => 1.2.3
-libSSH Version => libssh2/1.4.2
+SSL Version => NSS/3.21 Basic ECC
+ZLib Version => 1.2.7
+libSSH Version => libssh2/1.4.3
 
 date
 
@@ -198,7 +202,7 @@ dom
 
 DOM/XML => enabled
 DOM/XML API Version => 20031129
-libxml Version => 2.7.6
+libxml Version => 2.9.1
 HTML Support => enabled
 XPath Support => enabled
 XPointer Support => enabled
@@ -249,7 +253,7 @@ GIF Create Support => enabled
 JPEG Support => enabled
 libJPEG Version => 6b
 PNG Support => enabled
-libPNG Version => 1.2.49
+libPNG Version => 1.5.13
 WBMP Support => enabled
 XBM Support => enabled
 
@@ -263,7 +267,7 @@ GetText Support => enabled
 gmp
 
 gmp support => enabled
-GMP version => 4.3.1
+GMP version => 6.0.0
 
 hash
 
@@ -289,8 +293,8 @@ json version => 1.5.0
 libxml
 
 libXML support => active
-libXML Compiled Version => 2.7.6
-libXML Loaded Version => 20706
+libXML Compiled Version => 2.9.1
+libXML Loaded Version => 20901
 libXML streams => enabled
 
 mbstring
@@ -607,7 +611,7 @@ Revision => $Id: b691ca925e7a085e6929579c4eba8fed0732e0ef $
 readline
 
 Readline Support => enabled
-Readline library => 6.0
+Readline library => 6.2
 
 Directive => Local Value => Master Value
 cli.pager => no value => no value
@@ -743,7 +747,7 @@ xml
 
 XML Support => active
 XML Namespace Support => active
-libxml2 Version => 2.7.6
+libxml2 Version => 2.9.1
 
 xmlreader
 
@@ -764,10 +768,68 @@ XMLWriter => enabled
 xsl
 
 XSL => enabled
-libxslt Version => 1.1.26
-libxslt compiled against libxml Version => 2.7.6
+libxslt Version => 1.1.28
+libxslt compiled against libxml Version => 2.9.1
 EXSLT => enabled
-libexslt Version => 1.1.26
+libexslt Version => 1.1.28
+
+Zend OPcache
+
+Opcode Caching => Up and Running
+Optimization => Enabled
+SHM Cache => Enabled
+File Cache => Disabled
+Startup => OK
+Shared memory model => mmap
+Cache hits => 0
+Cache misses => 0
+Used memory => 18734928
+Free memory => 115482800
+Wasted memory => 0
+Interned Strings Used memory => 239536
+Interned Strings Free memory => 8149072
+Cached scripts => 0
+Cached keys => 0
+Max keys => 16229
+OOM restarts => 0
+Hash keys restarts => 0
+Manual restarts => 0
+
+Directive => Local Value => Master Value
+opcache.blacklist_filename => no value => no value
+opcache.consistency_checks => 0 => 0
+opcache.dups_fix => Off => Off
+opcache.enable => On => On
+opcache.enable_cli => On => On
+opcache.enable_file_override => Off => Off
+opcache.error_log => no value => no value
+opcache.fast_shutdown => 0 => 0
+opcache.file_cache => no value => no value
+opcache.file_cache_consistency_checks => 1 => 1
+opcache.file_cache_only => 0 => 0
+opcache.file_update_protection => 2 => 2
+opcache.force_restart_timeout => 180 => 180
+opcache.huge_code_pages => Off => Off
+opcache.inherited_hack => On => On
+opcache.interned_strings_buffer => 8 => 8
+opcache.lockfile_path => /tmp => /tmp
+opcache.log_verbosity_level => 1 => 1
+opcache.max_accelerated_files => 10000 => 10000
+opcache.max_file_size => 0 => 0
+opcache.max_wasted_percentage => 5 => 5
+opcache.memory_consumption => 128 => 128
+opcache.opt_debug_level => 0 => 0
+opcache.optimization_level => 0x7FFFBFFF => 0x7FFFBFFF
+opcache.preferred_memory_model => no value => no value
+opcache.protect_memory => 0 => 0
+opcache.restrict_api => no value => no value
+opcache.revalidate_freq => 2 => 2
+opcache.revalidate_path => Off => Off
+opcache.save_comments => 1 => 1
+opcache.use_cwd => On => On
+opcache.validate_permission => Off => Off
+opcache.validate_root => Off => Off
+opcache.validate_timestamps => On => On
 
 zip
 
@@ -780,8 +842,8 @@ zlib
 ZLib Support => enabled
 Stream Wrapper => compress.zlib://
 Stream Filter => zlib.inflate, zlib.deflate
-Compiled Version => 1.2.3
-Linked Version => 1.2.3
+Compiled Version => 1.2.7
+Linked Version => 1.2.7
 
 Directive => Local Value => Master Value
 zlib.output_compression => Off => Off
@@ -796,7 +858,7 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => c49c62e9fcf7
+HOSTNAME => 06d4171266bb
 PHP_VERSION => 7.1.5
 PHP_PREFIX => /usr
 PHP_CONFIG_FILE_PATH => /etc
@@ -807,7 +869,7 @@ PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => c49c62e9fcf7
+$_SERVER['HOSTNAME'] => 06d4171266bb
 $_SERVER['PHP_VERSION'] => 7.1.5
 $_SERVER['PHP_PREFIX'] => /usr
 $_SERVER['PHP_CONFIG_FILE_PATH'] => /etc
@@ -818,8 +880,8 @@ $_SERVER['SCRIPT_NAME'] =>
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495250419.1457
-$_SERVER['REQUEST_TIME'] => 1495250419
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495273587.872
+$_SERVER['REQUEST_TIME'] => 1495273587
 $_SERVER['argv'] => Array
 (
 )
