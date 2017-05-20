@@ -10,6 +10,7 @@ PHP Version
 PHP 7.1.5 (cli) (built: May 20 2017 03:36:24) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.1.5, Copyright (c) 1999-2017, by Zend Technologies
 
 PHP Modules
 --------------
@@ -65,8 +66,10 @@ xmlreader
 xmlrpc
 xmlwriter
 xsl
+Zend OPcache
 zip
 zlib
 
 [Zend Modules]
+Zend OPcache
 

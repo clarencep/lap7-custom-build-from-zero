@@ -1,7 +1,7 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux c6bd9765b7c9 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+System => Linux 8cef4b70addb 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
 Build Date => May 20 2017 03:32:57
 Configure Command =>  './configure'  '--prefix=/usr' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--with-apxs2=/usr/sbin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
 Server API => Command Line Interface
@@ -12,6 +12,7 @@ Scan this dir for additional .ini files => /etc/php.d
 Additional .ini files parsed => /etc/php.d/igbinary.ini,
 /etc/php.d/imagick.ini,
 /etc/php.d/inotify.ini,
+/etc/php.d/opcache.ini,
 /etc/php.d/redis.ini
 
 PHP API => 20160303
@@ -33,6 +34,7 @@ Registered Stream Filters => zlib.*, bzip2.*, convert.iconv.*, mcrypt.*, mdecryp
 
 This program makes use of the Zend Scripting Language Engine:
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.1.5, Copyright (c) 1999-2017, by Zend Technologies
 
 
  _______________________________________________________________________
@@ -769,6 +771,64 @@ libxslt compiled against libxml Version => 2.7.6
 EXSLT => enabled
 libexslt Version => 1.1.26
 
+Zend OPcache
+
+Opcode Caching => Up and Running
+Optimization => Enabled
+SHM Cache => Enabled
+File Cache => Disabled
+Startup => OK
+Shared memory model => mmap
+Cache hits => 0
+Cache misses => 0
+Used memory => 18734928
+Free memory => 115482800
+Wasted memory => 0
+Interned Strings Used memory => 236056
+Interned Strings Free memory => 8152552
+Cached scripts => 0
+Cached keys => 0
+Max keys => 16229
+OOM restarts => 0
+Hash keys restarts => 0
+Manual restarts => 0
+
+Directive => Local Value => Master Value
+opcache.blacklist_filename => no value => no value
+opcache.consistency_checks => 0 => 0
+opcache.dups_fix => Off => Off
+opcache.enable => On => On
+opcache.enable_cli => On => On
+opcache.enable_file_override => Off => Off
+opcache.error_log => no value => no value
+opcache.fast_shutdown => 0 => 0
+opcache.file_cache => no value => no value
+opcache.file_cache_consistency_checks => 1 => 1
+opcache.file_cache_only => 0 => 0
+opcache.file_update_protection => 2 => 2
+opcache.force_restart_timeout => 180 => 180
+opcache.huge_code_pages => Off => Off
+opcache.inherited_hack => On => On
+opcache.interned_strings_buffer => 8 => 8
+opcache.lockfile_path => /tmp => /tmp
+opcache.log_verbosity_level => 1 => 1
+opcache.max_accelerated_files => 10000 => 10000
+opcache.max_file_size => 0 => 0
+opcache.max_wasted_percentage => 5 => 5
+opcache.memory_consumption => 128 => 128
+opcache.opt_debug_level => 0 => 0
+opcache.optimization_level => 0x7FFFBFFF => 0x7FFFBFFF
+opcache.preferred_memory_model => no value => no value
+opcache.protect_memory => 0 => 0
+opcache.restrict_api => no value => no value
+opcache.revalidate_freq => 2 => 2
+opcache.revalidate_path => Off => Off
+opcache.save_comments => 1 => 1
+opcache.use_cwd => On => On
+opcache.validate_permission => Off => Off
+opcache.validate_root => Off => Off
+opcache.validate_timestamps => On => On
+
 zip
 
 Zip => enabled
@@ -796,7 +856,7 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => c6bd9765b7c9
+HOSTNAME => 8cef4b70addb
 PHP_VERSION => 7.1.5
 PHP_PREFIX => /usr
 PHP_CONFIG_FILE_PATH => /etc
@@ -807,7 +867,7 @@ PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => c6bd9765b7c9
+$_SERVER['HOSTNAME'] => 8cef4b70addb
 $_SERVER['PHP_VERSION'] => 7.1.5
 $_SERVER['PHP_PREFIX'] => /usr
 $_SERVER['PHP_CONFIG_FILE_PATH'] => /etc
@@ -818,8 +878,8 @@ $_SERVER['SCRIPT_NAME'] =>
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495257927.367
-$_SERVER['REQUEST_TIME'] => 1495257927
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495273778.9387
+$_SERVER['REQUEST_TIME'] => 1495273778
 $_SERVER['argv'] => Array
 (
 )

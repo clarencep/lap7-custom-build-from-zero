@@ -112,4 +112,21 @@ RUN $PECL install imagick && echo "exstension=imagick.so" > $PHP_CONFIG_FILE_PAT
 #     && make install \
 #     && echo "exstension=memcached.so" > $PHP_CONFIG_FILE_PATH/php.d/memcached.ini
 
-RUN php -v && php -m | sort
+# RUN php -v && php -m | sort
+
+RUN sed 's|;opcache.enable|opcache.enable|' -i $PHP_CONFIG_FILE_PATH/php.ini \
+    && echo 'zend_extension=opcache.so' > $PHP_CONFIG_FILE_PATH/php.d/opcache.ini 
+
+RUN rm -f /var/www/html/index.html \
+    && echo '<?php phpinfo();' > /var/www/html/index.php \
+    && sed 's|logs/access_log|/dev/stdout|' -i /etc/httpd/conf/httpd.conf \
+    && sed 's|logs/error_log|/dev/stderr|' -i /etc/httpd/conf/httpd.conf \
+    && echo '# Enable php7 to deal .php files.' > /etc/httpd/conf.d/php.conf \
+    && echo 'AddHandler php7-script .php' >> /etc/httpd/conf.d/php.conf \
+    && echo 'AddType text/html .php' >> /etc/httpd/conf.d/php.conf \
+    && echo 'DirectoryIndex index.php' >> /etc/httpd/conf.d/php.conf \
+    && yum clean all 
+
+EXPOSE 80 443
+
+CMD [ "/usr/sbin/httpd", "-DFOREGROUND" ]
