@@ -32,6 +32,9 @@ gettext
 gmp
 hash
 iconv
+igbinary
+imagick
+inotify
 json
 libxml
 mbstring
@@ -47,6 +50,7 @@ pdo_sqlite
 Phar
 posix
 readline
+redis
 Reflection
 session
 shmop
