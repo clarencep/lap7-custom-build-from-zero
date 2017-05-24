@@ -4,6 +4,7 @@ IMAGE_NAME=lap7-custom-build-from-zero:centos6
 
 docker build -t clarencep/$IMAGE_NAME .
 
+cat ./check-extensions.php | docker run -i --rm clarencep/$IMAGE_NAME php
 
 docker run --rm clarencep/$IMAGE_NAME sh -c '\
     echo ""; \

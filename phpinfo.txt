@@ -1,27 +1,27 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux 8cef4b70addb 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 20 2017 03:32:57
-Configure Command =>  './configure'  '--prefix=/usr' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--with-apxs2=/usr/sbin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
+System => Linux b6b0d46eba09 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 24 2017 08:33:56
+Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
 Server API => Command Line Interface
-Virtual Directory Support => disabled
-Configuration File (php.ini) Path => /etc
-Loaded Configuration File => /etc/php.ini
-Scan this dir for additional .ini files => /etc/php.d
-Additional .ini files parsed => /etc/php.d/igbinary.ini,
-/etc/php.d/imagick.ini,
-/etc/php.d/inotify.ini,
-/etc/php.d/opcache.ini,
-/etc/php.d/redis.ini
+Virtual Directory Support => enabled
+Configuration File (php.ini) Path => /data/server/php-7.1.5/etc
+Loaded Configuration File => /data/server/php-7.1.5/etc/php.ini
+Scan this dir for additional .ini files => /data/server/php-7.1.5/etc/php.d
+Additional .ini files parsed => /data/server/php-7.1.5/etc/php.d/igbinary.ini,
+/data/server/php-7.1.5/etc/php.d/imagick.ini,
+/data/server/php-7.1.5/etc/php.d/inotify.ini,
+/data/server/php-7.1.5/etc/php.d/opcache.ini,
+/data/server/php-7.1.5/etc/php.d/redis.ini
 
 PHP API => 20160303
 PHP Extension => 20160303
 Zend Extension => 320160303
-Zend Extension Build => API320160303,NTS
-PHP Extension Build => API20160303,NTS
+Zend Extension Build => API320160303,TS
+PHP Extension Build => API20160303,TS
 Debug Build => no
-Thread Safety => disabled
+Thread Safety => enabled
 Zend Signal Handling => enabled
 Zend Memory Manager => enabled
 Zend Multibyte Support => provided by mbstring
@@ -89,7 +89,7 @@ error_log => no value => no value
 error_prepend_string => no value => no value
 error_reporting => 22527 => 22527
 expose_php => On => On
-extension_dir => /usr/lib/php/extensions/no-debug-non-zts-20160303 => /usr/lib/php/extensions/no-debug-non-zts-20160303
+extension_dir => /data/server/php-7.1.5/lib/php/extensions/no-debug-zts-20160303 => /data/server/php-7.1.5/lib/php/extensions/no-debug-zts-20160303
 file_uploads => On => On
 hard_timeout => 2 => 2
 highlight.comment => <font style="color: #FF8000">#FF8000</font> => <font style="color: #FF8000">#FF8000</font>
@@ -102,7 +102,7 @@ ignore_repeated_errors => Off => Off
 ignore_repeated_source => Off => Off
 ignore_user_abort => Off => Off
 implicit_flush => On => On
-include_path => .:/usr/lib/php => .:/usr/lib/php
+include_path => .:/data/server/php-7.1.5/lib/php => .:/data/server/php-7.1.5/lib/php
 input_encoding => no value => no value
 internal_encoding => no value => no value
 log_errors => On => On
@@ -781,11 +781,9 @@ Startup => OK
 Shared memory model => mmap
 Cache hits => 0
 Cache misses => 0
-Used memory => 18734928
-Free memory => 115482800
+Used memory => 909136
+Free memory => 133308592
 Wasted memory => 0
-Interned Strings Used memory => 236056
-Interned Strings Free memory => 8152552
 Cached scripts => 0
 Cached keys => 0
 Max keys => 16229
@@ -856,30 +854,38 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => 8cef4b70addb
+HOSTNAME => b6b0d46eba09
+SRC_DIR => /data/server/src
 PHP_VERSION => 7.1.5
-PHP_PREFIX => /usr
-PHP_CONFIG_FILE_PATH => /etc
-PECL => /usr/bin/pecl
+HTTPD_VERSION => 2.4.25
+HTTPD_PREFIX => /data/server/httpd-2.4.25
+HTTPD_CONFIG_FILE_PATH => /data/server/httpd-2.4.25/etc
+PHP_PREFIX => /data/server/php-7.1.5
+PHP_CONFIG_FILE_PATH => /data/server/php-7.1.5/etc
+PECL => /data/server/php-7.1.5/bin/pecl
 HOME => /root
 
 PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => 8cef4b70addb
+$_SERVER['HOSTNAME'] => b6b0d46eba09
+$_SERVER['SRC_DIR'] => /data/server/src
 $_SERVER['PHP_VERSION'] => 7.1.5
-$_SERVER['PHP_PREFIX'] => /usr
-$_SERVER['PHP_CONFIG_FILE_PATH'] => /etc
-$_SERVER['PECL'] => /usr/bin/pecl
+$_SERVER['HTTPD_VERSION'] => 2.4.25
+$_SERVER['HTTPD_PREFIX'] => /data/server/httpd-2.4.25
+$_SERVER['HTTPD_CONFIG_FILE_PATH'] => /data/server/httpd-2.4.25/etc
+$_SERVER['PHP_PREFIX'] => /data/server/php-7.1.5
+$_SERVER['PHP_CONFIG_FILE_PATH'] => /data/server/php-7.1.5/etc
+$_SERVER['PECL'] => /data/server/php-7.1.5/bin/pecl
 $_SERVER['HOME'] => /root
 $_SERVER['PHP_SELF'] => 
 $_SERVER['SCRIPT_NAME'] => 
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495273778.9387
-$_SERVER['REQUEST_TIME'] => 1495273778
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495620003.4977
+$_SERVER['REQUEST_TIME'] => 1495620003
 $_SERVER['argv'] => Array
 (
 )
