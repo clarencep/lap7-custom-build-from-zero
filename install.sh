@@ -90,7 +90,8 @@ cd $SRC_DIR/httpd-$HTTPD_VERSION
     --prefix=$HTTPD_PREFIX \
     --with-apr=$HTTPD_PREFIX/apr \
     --with-apr-util=$HTTPD_PREFIX/apr-util \
-    --enable-mods-shared=all 
+    --enable-mods-shared=all \
+    --enable-mpms-shared=all
         #   --enable-rewrite 
         #   --enable-proxy 
         #   --enable-proxy-http 

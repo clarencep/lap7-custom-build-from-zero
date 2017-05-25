@@ -1,8 +1,8 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux adda6e5d8583 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 25 2017 09:34:32
+System => Linux 7274dcb2a34c 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 25 2017 10:14:05
 Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--disable-debug' '--disable-phpdbg' '--with-pic' '--disable-rpath' '--with-freetype-dir=/usr' '--with-png-dir=/usr' '--with-xpm-dir=/usr' '--enable-gd-native-ttf' '--with-t1lib=/usr' '--without-gdbm' '--with-jpeg-dir=/usr' '--with-openssl' '--with-pcre-regex' '--with-zlib' '--with-layout=GNU' '--with-kerberos' '--with-libxml-dir=/usr' '--with-system-tzdata' '--with-mhash' '--enable-force-cgi-redirect' '--enable-pcntl' '--enable-fastcgi' '--enable-mbstring=shared' '--enable-mbregex' '--with-gd=shared' '--with-gmp=shared' '--enable-calendar=shared' '--enable-bcmath=shared' '--with-bz2=shared' '--enable-ctype=shared' '--enable-dba=shared' '--enable-exif=shared' '--enable-ftp=shared' '--with-gettext=shared' '--with-iconv=shared' '--enable-sockets=shared' '--enable-tokenizer=shared' '--with-xmlrpc=shared' '--enable-dom=shared' '--enable-simplexml=shared' '--enable-xml=shared' '--enable-wddx=shared' '--enable-soap=shared' '--with-xsl=shared,/usr' '--enable-xmlreader=shared' '--enable-xmlwriter=shared' '--with-curl=shared,/usr' '--enable-mysqlnd=shared' '--with-mysqli=shared,mysqlnd' '--with-mysql-sock=/var/lib/mysql/mysql.sock' '--enable-pdo=shared' '--with-pdo-mysql=shared,mysqlnd' '--with-pdo-sqlite=shared,/usr' '--with-sqlite3=shared,/usr' '--enable-json=shared' '--enable-zip=shared' '--enable-phar=shared' '--with-mcrypt=shared,/usr' '--enable-sysvmsg=shared' '--enable-sysvshm=shared' '--enable-sysvsem=shared' '--enable-shmop=shared' '--enable-posix=shared' '--enable-intl=shared' '--with-recode=shared,/usr' '--with-readline=shared' '--enable-opcache'
 Server API => Command Line Interface
 Virtual Directory Support => enabled
@@ -968,22 +968,22 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => adda6e5d8583
+HOSTNAME => 7274dcb2a34c
 HOME => /root
 
 PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => adda6e5d8583
+$_SERVER['HOSTNAME'] => 7274dcb2a34c
 $_SERVER['HOME'] => /root
 $_SERVER['PHP_SELF'] => 
 $_SERVER['SCRIPT_NAME'] => 
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495705558.2786
-$_SERVER['REQUEST_TIME'] => 1495705558
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495707895.5465
+$_SERVER['REQUEST_TIME'] => 1495707895
 $_SERVER['argv'] => Array
 (
 )
