@@ -103,7 +103,7 @@ make install
 
 # install mcrypt and mhash
 {
-    OS_VERSION="x"`cat /etc/os-release  | grep VERSION_ID | grep -o -E '[0-9]+'`
+    OS_VERSION="x"`cat /etc/os-release  | grep VERSION_ID | grep -o -E '[0-9]+'  || echo 6`
     if [ "$OS_VERSION" == "x7" ]; then
         wget -O $SRC_DIR/epel-release-7-9.noarch.rpm http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
         wget -O $SRC_DIR/remi-release-7.rpm http://rpms.famillecollet.com/enterprise/remi-release-7.rpm 
