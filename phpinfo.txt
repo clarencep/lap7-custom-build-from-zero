@@ -1,19 +1,61 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux 4d6b2e57e049 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 24 2017 08:33:56
-Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
+System => Linux 55d6d9a56b19 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 25 2017 06:33:43
+Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--disable-debug' '--disable-phpdbg' '--with-pic' '--disable-rpath' '--with-freetype-dir=/usr' '--with-png-dir=/usr' '--with-xpm-dir=/usr' '--enable-gd-native-ttf' '--with-t1lib=/usr' '--without-gdbm' '--with-jpeg-dir=/usr' '--with-openssl' '--with-pcre-regex' '--with-zlib' '--with-layout=GNU' '--with-kerberos' '--with-libxml-dir=/usr' '--with-system-tzdata' '--with-mhash' '--enable-force-cgi-redirect' '--enable-pcntl' '--enable-fastcgi' '--enable-mbstring=shared' '--enable-mbregex' '--with-gd=shared' '--with-gmp=shared' '--enable-calendar=shared' '--enable-bcmath=shared' '--with-bz2=shared' '--enable-ctype=shared' '--enable-dba=shared' '--enable-exif=shared' '--enable-ftp=shared' '--with-gettext=shared' '--with-iconv=shared' '--enable-sockets=shared' '--enable-tokenizer=shared' '--with-xmlrpc=shared' '--enable-dom=shared' '--enable-simplexml=shared' '--enable-xml=shared' '--enable-wddx=shared' '--enable-soap=shared' '--with-xsl=shared,/usr' '--enable-xmlreader=shared' '--enable-xmlwriter=shared' '--with-curl=shared,/usr' '--enable-mysqlnd=shared' '--with-mysqli=shared,mysqlnd' '--with-mysql-sock=/var/lib/mysql/mysql.sock' '--enable-pdo=shared' '--with-pdo-mysql=shared,mysqlnd' '--with-pdo-sqlite=shared,/usr' '--with-sqlite3=shared,/usr' '--enable-json=shared' '--enable-zip=shared' '--enable-phar=shared' '--with-mcrypt=shared,/usr' '--enable-sysvmsg=shared' '--enable-sysvshm=shared' '--enable-sysvsem=shared' '--enable-shmop=shared' '--enable-posix=shared' '--enable-intl=shared' '--with-recode=shared,/usr' '--with-readline=shared' '--enable-opcache'
 Server API => Command Line Interface
 Virtual Directory Support => enabled
 Configuration File (php.ini) Path => /data/server/php-7.1.5/etc
 Loaded Configuration File => /data/server/php-7.1.5/etc/php.ini
 Scan this dir for additional .ini files => /data/server/php-7.1.5/etc/php.d
-Additional .ini files parsed => /data/server/php-7.1.5/etc/php.d/igbinary.ini,
+Additional .ini files parsed => /data/server/php-7.1.5/etc/php.d/bcmath.ini,
+/data/server/php-7.1.5/etc/php.d/bz2.ini,
+/data/server/php-7.1.5/etc/php.d/calendar.ini,
+/data/server/php-7.1.5/etc/php.d/ctype.ini,
+/data/server/php-7.1.5/etc/php.d/curl.ini,
+/data/server/php-7.1.5/etc/php.d/dba.ini,
+/data/server/php-7.1.5/etc/php.d/dom.ini,
+/data/server/php-7.1.5/etc/php.d/exif.ini,
+/data/server/php-7.1.5/etc/php.d/ftp.ini,
+/data/server/php-7.1.5/etc/php.d/gd.ini,
+/data/server/php-7.1.5/etc/php.d/gettext.ini,
+/data/server/php-7.1.5/etc/php.d/gmp.ini,
+/data/server/php-7.1.5/etc/php.d/iconv.ini,
+/data/server/php-7.1.5/etc/php.d/igbinary.ini,
 /data/server/php-7.1.5/etc/php.d/imagick.ini,
 /data/server/php-7.1.5/etc/php.d/inotify.ini,
+/data/server/php-7.1.5/etc/php.d/intl.ini,
+/data/server/php-7.1.5/etc/php.d/json.ini,
+/data/server/php-7.1.5/etc/php.d/mbstring.ini,
+/data/server/php-7.1.5/etc/php.d/mcrypt.ini,
+/data/server/php-7.1.5/etc/php.d/mysqlnd.ini,
+/data/server/php-7.1.5/etc/php.d/mysqlnd_mysqli.ini,
 /data/server/php-7.1.5/etc/php.d/opcache.ini,
-/data/server/php-7.1.5/etc/php.d/redis.ini
+/data/server/php-7.1.5/etc/php.d/pdo.ini,
+/data/server/php-7.1.5/etc/php.d/pdo_mysql.ini,
+/data/server/php-7.1.5/etc/php.d/pdo_sqlite.ini,
+/data/server/php-7.1.5/etc/php.d/phar.ini,
+/data/server/php-7.1.5/etc/php.d/posix.ini,
+/data/server/php-7.1.5/etc/php.d/readline.ini,
+/data/server/php-7.1.5/etc/php.d/recode.ini,
+/data/server/php-7.1.5/etc/php.d/redis.ini,
+/data/server/php-7.1.5/etc/php.d/shmop.ini,
+/data/server/php-7.1.5/etc/php.d/simplexml.ini,
+/data/server/php-7.1.5/etc/php.d/soap.ini,
+/data/server/php-7.1.5/etc/php.d/sockets.ini,
+/data/server/php-7.1.5/etc/php.d/sqlite3.ini,
+/data/server/php-7.1.5/etc/php.d/sysvmsg.ini,
+/data/server/php-7.1.5/etc/php.d/sysvsem.ini,
+/data/server/php-7.1.5/etc/php.d/sysvshm.ini,
+/data/server/php-7.1.5/etc/php.d/tokenizer.ini,
+/data/server/php-7.1.5/etc/php.d/wddx.ini,
+/data/server/php-7.1.5/etc/php.d/xml.ini,
+/data/server/php-7.1.5/etc/php.d/xmlreader.ini,
+/data/server/php-7.1.5/etc/php.d/xmlrpc.ini,
+/data/server/php-7.1.5/etc/php.d/xmlwriter.ini,
+/data/server/php-7.1.5/etc/php.d/xsl.ini,
+/data/server/php-7.1.5/etc/php.d/zip.ini
 
 PHP API => 20160303
 PHP Extension => 20160303
@@ -28,9 +70,9 @@ Zend Multibyte Support => provided by mbstring
 IPv6 Support => enabled
 DTrace Support => disabled
 
-Registered PHP Streams => https, ftps, compress.zlib, compress.bzip2, php, file, glob, data, http, ftp, phar, zip
+Registered PHP Streams => https, ftps, compress.zlib, php, file, glob, data, http, ftp, compress.bzip2, phar, zip
 Registered Stream Socket Transports => tcp, udp, unix, udg, ssl, sslv3, tls, tlsv1.0, tlsv1.1, tlsv1.2
-Registered Stream Filters => zlib.*, bzip2.*, convert.iconv.*, mcrypt.*, mdecrypt.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk
+Registered Stream Filters => zlib.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, bzip2.*, convert.iconv.*, mcrypt.*, mdecrypt.*
 
 This program makes use of the Zend Scripting Language Engine:
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
@@ -89,7 +131,7 @@ error_log => no value => no value
 error_prepend_string => no value => no value
 error_reporting => 22527 => 22527
 expose_php => On => On
-extension_dir => /data/server/php-7.1.5/lib/php/extensions/no-debug-zts-20160303 => /data/server/php-7.1.5/lib/php/extensions/no-debug-zts-20160303
+extension_dir => /data/server/php-7.1.5/lib/php/20160303-zts => /data/server/php-7.1.5/lib/php/20160303-zts
 file_uploads => On => On
 hard_timeout => 2 => 2
 highlight.comment => <font style="color: #FF8000">#FF8000</font> => <font style="color: #FF8000">#FF8000</font>
@@ -102,7 +144,7 @@ ignore_repeated_errors => Off => Off
 ignore_repeated_source => Off => Off
 ignore_user_abort => Off => Off
 implicit_flush => On => On
-include_path => .:/data/server/php-7.1.5/lib/php => .:/data/server/php-7.1.5/lib/php
+include_path => .:/data/server/php-7.1.5/share/pear => .:/data/server/php-7.1.5/share/pear
 input_encoding => no value => no value
 internal_encoding => no value => no value
 log_errors => On => On
@@ -196,6 +238,14 @@ date.sunrise_zenith => 90.583333 => 90.583333
 date.sunset_zenith => 90.583333 => 90.583333
 date.timezone => no value => no value
 
+dba
+
+DBA support => enabled
+Supported handlers => cdb cdb_make inifile flatfile 
+
+Directive => Local Value => Master Value
+dba.default_handler => flatfile => flatfile
+
 dom
 
 DOM/XML => enabled
@@ -246,6 +296,9 @@ gd
 
 GD Support => enabled
 GD Version => bundled (2.1.0 compatible)
+FreeType Support => enabled
+FreeType Linkage => with freetype
+FreeType Version => 2.3.11
 GIF Read Support => enabled
 GIF Create Support => enabled
 JPEG Support => enabled
@@ -253,6 +306,8 @@ libJPEG Version => 6b
 PNG Support => enabled
 libPNG Version => 1.2.49
 WBMP Support => enabled
+XPM Support => enabled
+libXpm Version => 30411
 XBM Support => enabled
 
 Directive => Local Value => Master Value
@@ -272,11 +327,14 @@ hash
 hash support => enabled
 Hashing Engines => md2 md4 md5 sha1 sha224 sha256 sha384 sha512/224 sha512/256 sha512 sha3-224 sha3-256 sha3-384 sha3-512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost gost-crypto adler32 crc32 crc32b fnv132 fnv1a32 fnv164 fnv1a64 joaat haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5 
 
+MHASH support => Enabled
+MHASH API Version => Emulated Support
+
 iconv
 
 iconv support => enabled
 iconv implementation => glibc
-iconv library version => 1.15
+iconv library version => 2.12
 
 Directive => Local Value => Master Value
 iconv.input_encoding => no value => no value
@@ -313,6 +371,17 @@ imagick.skip_version_check => 0 => 0
 inotify
 
 Version => 2.0.0
+
+intl
+
+Internationalization support => enabled
+version => 1.1.0
+ICU version => 4.2.1
+
+Directive => Local Value => Master Value
+intl.default_locale => no value => no value
+intl.error_level => 0 => 0
+intl.use_exceptions => 0 => 0
 
 json
 
@@ -379,7 +448,7 @@ mysqli.allow_persistent => On => On
 mysqli.default_host => no value => no value
 mysqli.default_port => 3306 => 3306
 mysqli.default_pw => no value => no value
-mysqli.default_socket => no value => no value
+mysqli.default_socket => /var/lib/mysql/mysql.sock => /var/lib/mysql/mysql.sock
 mysqli.default_user => no value => no value
 mysqli.max_links => Unlimited => Unlimited
 mysqli.max_persistent => Unlimited => Unlimited
@@ -400,7 +469,7 @@ Collecting statistics => Yes
 Collecting memory statistics => No
 Tracing => n/a
 Loaded plugins => mysqlnd,debug_trace,auth_plugin_mysql_native_password,auth_plugin_mysql_clear_password,auth_plugin_sha256_password
-API Extensions => pdo_mysql,mysqli
+API Extensions => mysqli,pdo_mysql
 
 mysqlnd statistics =>  
 bytes_sent => 0
@@ -604,12 +673,12 @@ PDO Driver for MySQL => enabled
 Client API version => mysqlnd 5.0.12-dev - 20150407 - $Id: b396954eeb2d1d9ed7902b8bae237b287f21ad9e $
 
 Directive => Local Value => Master Value
-pdo_mysql.default_socket => /tmp/mysql.sock => /tmp/mysql.sock
+pdo_mysql.default_socket => /var/lib/mysql/mysql.sock => /var/lib/mysql/mysql.sock
 
 pdo_sqlite
 
 PDO Driver for SQLite 3.x => enabled
-SQLite Library => 3.15.1
+SQLite Library => 3.6.20
 
 Phar
 
@@ -646,6 +715,11 @@ Directive => Local Value => Master Value
 cli.pager => no value => no value
 cli.prompt => \b \>  => \b \> 
 
+recode
+
+Recode Support => enabled
+Revision => $Id: e175cff622634146da7151369502cde27702683e $
+
 redis
 
 Redis Support => enabled
@@ -661,7 +735,7 @@ session
 
 Session Support => enabled
 Registered save handlers => files user redis rediscluster 
-Registered serializer handlers => php_serialize php php_binary wddx igbinary 
+Registered serializer handlers => php_serialize php php_binary igbinary wddx 
 
 Directive => Local Value => Master Value
 session.auto_start => Off => Off
@@ -730,7 +804,7 @@ sqlite3
 
 SQLite3 support => enabled
 SQLite3 module version => 0.7-dev
-SQLite Library => 3.15.1
+SQLite Library => 3.6.20
 
 Directive => Local Value => Master Value
 sqlite3.extension_dir => no value => no value
@@ -891,12 +965,11 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => 4d6b2e57e049
+HOSTNAME => 55d6d9a56b19
 SRC_DIR => /data/server/src
 PHP_VERSION => 7.1.5
 HTTPD_VERSION => 2.4.25
 HTTPD_PREFIX => /data/server/httpd-2.4.25
-HTTPD_CONFIG_FILE_PATH => /data/server/httpd-2.4.25/etc
 PHP_PREFIX => /data/server/php-7.1.5
 PHP_CONFIG_FILE_PATH => /data/server/php-7.1.5/etc
 PECL => /data/server/php-7.1.5/bin/pecl
@@ -906,12 +979,11 @@ PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => 4d6b2e57e049
+$_SERVER['HOSTNAME'] => 55d6d9a56b19
 $_SERVER['SRC_DIR'] => /data/server/src
 $_SERVER['PHP_VERSION'] => 7.1.5
 $_SERVER['HTTPD_VERSION'] => 2.4.25
 $_SERVER['HTTPD_PREFIX'] => /data/server/httpd-2.4.25
-$_SERVER['HTTPD_CONFIG_FILE_PATH'] => /data/server/httpd-2.4.25/etc
 $_SERVER['PHP_PREFIX'] => /data/server/php-7.1.5
 $_SERVER['PHP_CONFIG_FILE_PATH'] => /data/server/php-7.1.5/etc
 $_SERVER['PECL'] => /data/server/php-7.1.5/bin/pecl
@@ -921,8 +993,8 @@ $_SERVER['SCRIPT_NAME'] =>
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495621435.1794
-$_SERVER['REQUEST_TIME'] => 1495621435
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495694985.6253
+$_SERVER['REQUEST_TIME'] => 1495694985
 $_SERVER['argv'] => Array
 (
 )

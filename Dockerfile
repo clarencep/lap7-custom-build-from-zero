@@ -40,7 +40,10 @@ RUN wget -O $SRC_DIR/apr-iconv-1.2.1.tar.gz http://mirrors.tuna.tsinghua.edu.cn/
 RUN yum install -y libxml2 libxml2-devel gmp-devel \
                    libzip-devel zlib-devel bzip2-devel \
                    gettext-devel libcurl-devel gd-devel openssl-devel \
-                   readline-devel libxslt libxslt-devel \
+                   readline readline-devel libxslt libxslt-devel \
+                   recode recode-devel \
+                   sqlite sqlite-devel \
+                   pcre pcre-devel \
                    libtool
 
 RUN cd $SRC_DIR/libiconv-1.15 \
@@ -71,8 +74,6 @@ RUN cd $SRC_DIR/apr-iconv-1.2.1 \
     && make \
     && mkdir -p $HTTPD_PREFIX $HTTPD_PREFIX/apr-iconv \
     && make install 
-
-RUN yum install -y pcre pcre-devel
 
 RUN cd $SRC_DIR/httpd-$HTTPD_VERSION \
     && ./configure \
@@ -107,54 +108,109 @@ RUN wget -O $SRC_DIR/epel-release-6-8.noarch.rpm http://dl.fedoraproject.org/pub
 # for apache
 # RUN yum install -y httpd httpd-devel
 
+RUN yum install -y libicu libicu-devel
+RUN yum install -y gcc-c++
 
-RUN cd $SRC_DIR/php-$PHP_VERSION \
+RUN CFLAGS='-O3'  \
+    cd $SRC_DIR/php-$PHP_VERSION \
     && ./configure \
         --prefix=$PHP_PREFIX \
         --with-config-file-path=$PHP_CONFIG_FILE_PATH \
         --with-config-file-scan-dir=$PHP_CONFIG_FILE_PATH/php.d \
         --with-apxs2=$HTTPD_PREFIX/bin/apxs \
-        --enable-opcache \
-        --enable-mbstring \
-        --enable-zip \
-        --enable-bcmath \
-        --enable-pcntl \
-        --enable-ftp \
-        --enable-calendar \
-        --enable-sysvmsg \
-        --enable-sysvsem \
-        --enable-sysvshm \
-        --enable-wddx \
-        --enable-exif \
-        --enable-shmop \
-        --enable-soap \
-        --enable-sockets \
-        --with-curl \
-        --with-mcrypt \
-        --with-iconv=/usr/local/libiconv \
-        --with-gmp \
-        --with-openssl \
-        --with-readline \
-        --with-zlib=/usr \
-        --with-bz2=/usr \
-        --with-gettext=/usr \
-        --with-mysql=mysqlnd \
-        --with-mysqli=mysqlnd \
-        --with-pdo-mysql=mysqlnd \
-        --with-gd \
-        --with-jpeg-dir=/usr \
+        --disable-debug \
+        --disable-phpdbg \
+        --with-pic \
+        --disable-rpath \
+        --with-freetype-dir=/usr \
         --with-png-dir=/usr \
-        --with-xmlrpc \
-        --with-xsl \
-        --with-readline \
+        --with-xpm-dir=/usr \
+        --enable-gd-native-ttf \
+        --with-t1lib=/usr \
+        --without-gdbm \
+        --with-jpeg-dir=/usr \
+        --with-openssl \
+        --with-pcre-regex \
+        --with-zlib \
+        --with-layout=GNU \
+        --with-kerberos \
+        --with-libxml-dir=/usr \
+        --with-system-tzdata \
+        --with-mhash \
+        --enable-force-cgi-redirect \
+        --enable-pcntl \
+        --enable-fastcgi \
+        --enable-mbstring=shared \
+        --enable-mbregex \
+        --with-gd=shared \
+        --with-gmp=shared \
+        --enable-calendar=shared \
+        --enable-bcmath=shared \
+        --with-bz2=shared \
+        --enable-ctype=shared \
+        --enable-dba=shared \
+        --enable-exif=shared \
+        --enable-ftp=shared \
+        --with-gettext=shared \
+        --with-iconv=shared \
+        --enable-sockets=shared \
+        --enable-tokenizer=shared \
+        --with-xmlrpc=shared \
+        --enable-dom=shared \
+        --enable-simplexml=shared \
+        --enable-xml=shared \
+        --enable-wddx=shared \
+        --enable-soap=shared \
+        --with-xsl=shared,/usr \
+        --enable-xmlreader=shared \
+        --enable-xmlwriter=shared \
+        --with-curl=shared,/usr \
+        --enable-mysqlnd=shared \
+        --with-mysqli=shared,mysqlnd \
+        --with-mysql-sock=/var/lib/mysql/mysql.sock \
+        --enable-pdo=shared \
+        --with-pdo-mysql=shared,mysqlnd \
+        --with-pdo-sqlite=shared,/usr \
+        --with-sqlite3=shared,/usr \
+        --enable-json=shared \
+        --enable-zip=shared \
+        --enable-phar=shared \
+        --with-mcrypt=shared,/usr \
+        --enable-sysvmsg=shared \
+        --enable-sysvshm=shared \
+        --enable-sysvsem=shared \
+        --enable-shmop=shared \
+        --enable-posix=shared \
+        --enable-intl=shared \
+        --with-recode=shared,/usr \
+        --with-readline=shared \
+        # --with-libedit \
+        --enable-opcache \
         # --with-imap \
         # --with-ldap \
     && make  \
     # && make test \
     && make install 
 
-RUN mkdir -p $PHP_CONFIG_FILE_PATH/php.d
-RUN cp $SRC_DIR/php-$PHP_VERSION/php.ini-production $PHP_CONFIG_FILE_PATH/php.ini
+
+# configure PHP
+RUN mkdir -p $PHP_CONFIG_FILE_PATH/php.d \
+    && cp $SRC_DIR/php-$PHP_VERSION/php.ini-production $PHP_CONFIG_FILE_PATH/php.ini \
+    && cd `$PHP_PREFIX/bin/php-config --extension-dir` \
+    # ensure mysqli loads after mysqlnd: \
+    && mv mysqli.so mysqlnd_mysqli.so  \
+    # enable all shared extensions: \
+    && { \
+        for x in *.so; do \
+            echo "extension=$x" > $PHP_CONFIG_FILE_PATH/php.d/${x/.so/}.ini; \
+        done; \
+    } \
+    # enable opcache \
+    && rm -f $PHP_CONFIG_FILE_PATH/php.d/opcache.ini \
+    && sed 's|;opcache.enable|opcache.enable|' -i $PHP_CONFIG_FILE_PATH/php.ini \
+    && echo 'zend_extension=opcache.so' > $PHP_CONFIG_FILE_PATH/php.d/opcache.ini \
+    # fix pecl \
+    && sed 's|PHP -C -n -q|PHP -C -q|' -i $PHP_PREFIX/bin/pecl
 
 ENV PECL $PHP_PREFIX/bin/pecl
 RUN $PECL install redis && echo "extension=redis.so" > $PHP_CONFIG_FILE_PATH/php.d/redis.ini
@@ -177,9 +233,6 @@ RUN $PECL install imagick && echo "extension=imagick.so" > $PHP_CONFIG_FILE_PATH
 
 # RUN php -v && php -m | sort
 
-# enable opcache
-RUN sed 's|;opcache.enable|opcache.enable|' -i $PHP_CONFIG_FILE_PATH/php.ini \
-    && echo 'zend_extension=opcache.so' > $PHP_CONFIG_FILE_PATH/php.d/opcache.ini 
 
 RUN [ "$HTTPD_PREFIX" != "/usr" ] && ln -s $HTTPD_PREFIX/bin/httpd /usr/sbin/httpd && mkdir -p /var/www &&  ln -s $HTTPD_PREFIX/htdocs /var/www/html; \
     [ "$PHP_PREFIX" != "/usr" ] && ln -s $PHP_PREFIX/bin/php /usr/bin/php 

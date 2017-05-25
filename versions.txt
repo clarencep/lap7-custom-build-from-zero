@@ -7,7 +7,7 @@ CentOS release 6.9 (Final)
 
 PHP Version
 --------------
-PHP 7.1.5 (cli) (built: May 24 2017 08:36:11) ( ZTS )
+PHP 7.1.5 (cli) (built: May 25 2017 06:38:01) ( ZTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
     with Zend OPcache v7.1.5, Copyright (c) 1999-2017, by Zend Technologies
@@ -22,6 +22,7 @@ Core
 ctype
 curl
 date
+dba
 dom
 exif
 fileinfo
@@ -35,6 +36,7 @@ iconv
 igbinary
 imagick
 inotify
+intl
 json
 libxml
 mbstring
@@ -50,6 +52,7 @@ pdo_sqlite
 Phar
 posix
 readline
+recode
 redis
 Reflection
 session
