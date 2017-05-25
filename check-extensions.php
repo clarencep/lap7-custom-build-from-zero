@@ -69,6 +69,22 @@ check_extension('igbinary', function(){
     do_assert(function_exists("igbinary_serialize"));
 });
 
+// check_extension('mysql', function(){
+//     do_assert(function_exists("mysql_connect"));
+// });
+
+check_extension('mysqli', function(){
+    do_assert(class_exists("mysqli"));
+});
+
+check_extension('PDO', function(){
+    do_assert(class_exists("PDO"));
+});
+
+
+check_extension('PDO_mysql', function(){
+    do_assert(extension_loaded("pdo_mysql"));
+});
 
 echo $stats['total'] . " Extensions checked. ";
 echo $stats['failed'] . " failed. ";

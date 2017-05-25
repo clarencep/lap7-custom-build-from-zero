@@ -1,29 +1,13 @@
 
 OS Version
 --------------
-CentOS Linux release 7.3.1611 (Core) 
-NAME="CentOS Linux"
-VERSION="7 (Core)"
-ID="centos"
-ID_LIKE="rhel fedora"
-VERSION_ID="7"
-PRETTY_NAME="CentOS Linux 7 (Core)"
-ANSI_COLOR="0;31"
-CPE_NAME="cpe:/o:centos:centos:7"
-HOME_URL="https://www.centos.org/"
-BUG_REPORT_URL="https://bugs.centos.org/"
-
-CENTOS_MANTISBT_PROJECT="CentOS-7"
-CENTOS_MANTISBT_PROJECT_VERSION="7"
-REDHAT_SUPPORT_PRODUCT="centos"
-REDHAT_SUPPORT_PRODUCT_VERSION="7"
-
-CentOS Linux release 7.3.1611 (Core) 
-CentOS Linux release 7.3.1611 (Core) 
+CentOS release 6.9 (Final)
+CentOS release 6.9 (Final)
+CentOS release 6.9 (Final)
 
 PHP Version
 --------------
-PHP 7.1.5 (cli) (built: May 20 2017 09:26:25) ( NTS )
+PHP 7.1.5 (cli) (built: May 25 2017 07:11:04) ( ZTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
     with Zend OPcache v7.1.5, Copyright (c) 1999-2017, by Zend Technologies
@@ -38,6 +22,7 @@ Core
 ctype
 curl
 date
+dba
 dom
 exif
 fileinfo
@@ -48,6 +33,10 @@ gettext
 gmp
 hash
 iconv
+igbinary
+imagick
+inotify
+intl
 json
 libxml
 mbstring
@@ -63,6 +52,8 @@ pdo_sqlite
 Phar
 posix
 readline
+recode
+redis
 Reflection
 session
 shmop

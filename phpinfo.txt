@@ -1,36 +1,78 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux 06d4171266bb 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 20 2017 09:24:21
-Configure Command =>  './configure'  '--prefix=/usr' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php.d' '--with-apxs2=/usr/bin/apxs' '--enable-opcache' '--enable-mbstring' '--enable-zip' '--enable-bcmath' '--enable-pcntl' '--enable-ftp' '--enable-calendar' '--enable-sysvmsg' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--enable-exif' '--enable-shmop' '--enable-soap' '--enable-sockets' '--with-curl' '--with-mcrypt' '--with-iconv=/usr/local/libiconv' '--with-gmp' '--with-openssl' '--with-zlib=/usr' '--with-bz2=/usr' '--with-gettext=/usr' '--with-mysql=mysqlnd' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-gd' '--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-xmlrpc' '--with-xsl' '--with-readline'
+System => Linux e2f8b8dbe9d4 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 25 2017 07:07:08
+Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--disable-debug' '--disable-phpdbg' '--with-pic' '--disable-rpath' '--with-freetype-dir=/usr' '--with-png-dir=/usr' '--with-xpm-dir=/usr' '--enable-gd-native-ttf' '--with-t1lib=/usr' '--without-gdbm' '--with-jpeg-dir=/usr' '--with-openssl' '--with-pcre-regex' '--with-zlib' '--with-layout=GNU' '--with-kerberos' '--with-libxml-dir=/usr' '--with-system-tzdata' '--with-mhash' '--enable-force-cgi-redirect' '--enable-pcntl' '--enable-fastcgi' '--enable-mbstring=shared' '--enable-mbregex' '--with-gd=shared' '--with-gmp=shared' '--enable-calendar=shared' '--enable-bcmath=shared' '--with-bz2=shared' '--enable-ctype=shared' '--enable-dba=shared' '--enable-exif=shared' '--enable-ftp=shared' '--with-gettext=shared' '--with-iconv=shared' '--enable-sockets=shared' '--enable-tokenizer=shared' '--with-xmlrpc=shared' '--enable-dom=shared' '--enable-simplexml=shared' '--enable-xml=shared' '--enable-wddx=shared' '--enable-soap=shared' '--with-xsl=shared,/usr' '--enable-xmlreader=shared' '--enable-xmlwriter=shared' '--with-curl=shared,/usr' '--enable-mysqlnd=shared' '--with-mysqli=shared,mysqlnd' '--with-mysql-sock=/var/lib/mysql/mysql.sock' '--enable-pdo=shared' '--with-pdo-mysql=shared,mysqlnd' '--with-pdo-sqlite=shared,/usr' '--with-sqlite3=shared,/usr' '--enable-json=shared' '--enable-zip=shared' '--enable-phar=shared' '--with-mcrypt=shared,/usr' '--enable-sysvmsg=shared' '--enable-sysvshm=shared' '--enable-sysvsem=shared' '--enable-shmop=shared' '--enable-posix=shared' '--enable-intl=shared' '--with-recode=shared,/usr' '--with-readline=shared' '--enable-opcache'
 Server API => Command Line Interface
-Virtual Directory Support => disabled
-Configuration File (php.ini) Path => /etc
-Loaded Configuration File => /etc/php.ini
-Scan this dir for additional .ini files => /etc/php.d
-Additional .ini files parsed => /etc/php.d/igbinary.ini,
-/etc/php.d/imagick.ini,
-/etc/php.d/inotify.ini,
-/etc/php.d/opcache.ini,
-/etc/php.d/redis.ini
+Virtual Directory Support => enabled
+Configuration File (php.ini) Path => /data/server/php-7.1.5/etc
+Loaded Configuration File => /data/server/php-7.1.5/etc/php.ini
+Scan this dir for additional .ini files => /data/server/php-7.1.5/etc/php.d
+Additional .ini files parsed => /data/server/php-7.1.5/etc/php.d/bcmath.ini,
+/data/server/php-7.1.5/etc/php.d/bz2.ini,
+/data/server/php-7.1.5/etc/php.d/calendar.ini,
+/data/server/php-7.1.5/etc/php.d/ctype.ini,
+/data/server/php-7.1.5/etc/php.d/curl.ini,
+/data/server/php-7.1.5/etc/php.d/dba.ini,
+/data/server/php-7.1.5/etc/php.d/dom.ini,
+/data/server/php-7.1.5/etc/php.d/exif.ini,
+/data/server/php-7.1.5/etc/php.d/ftp.ini,
+/data/server/php-7.1.5/etc/php.d/gd.ini,
+/data/server/php-7.1.5/etc/php.d/gettext.ini,
+/data/server/php-7.1.5/etc/php.d/gmp.ini,
+/data/server/php-7.1.5/etc/php.d/iconv.ini,
+/data/server/php-7.1.5/etc/php.d/igbinary.ini,
+/data/server/php-7.1.5/etc/php.d/imagick.ini,
+/data/server/php-7.1.5/etc/php.d/inotify.ini,
+/data/server/php-7.1.5/etc/php.d/intl.ini,
+/data/server/php-7.1.5/etc/php.d/json.ini,
+/data/server/php-7.1.5/etc/php.d/mbstring.ini,
+/data/server/php-7.1.5/etc/php.d/mcrypt.ini,
+/data/server/php-7.1.5/etc/php.d/mysqlnd.ini,
+/data/server/php-7.1.5/etc/php.d/mysqlnd_mysqli.ini,
+/data/server/php-7.1.5/etc/php.d/opcache.ini,
+/data/server/php-7.1.5/etc/php.d/pdo.ini,
+/data/server/php-7.1.5/etc/php.d/pdo_mysql.ini,
+/data/server/php-7.1.5/etc/php.d/pdo_sqlite.ini,
+/data/server/php-7.1.5/etc/php.d/phar.ini,
+/data/server/php-7.1.5/etc/php.d/posix.ini,
+/data/server/php-7.1.5/etc/php.d/readline.ini,
+/data/server/php-7.1.5/etc/php.d/recode.ini,
+/data/server/php-7.1.5/etc/php.d/redis.ini,
+/data/server/php-7.1.5/etc/php.d/shmop.ini,
+/data/server/php-7.1.5/etc/php.d/simplexml.ini,
+/data/server/php-7.1.5/etc/php.d/soap.ini,
+/data/server/php-7.1.5/etc/php.d/sockets.ini,
+/data/server/php-7.1.5/etc/php.d/sqlite3.ini,
+/data/server/php-7.1.5/etc/php.d/sysvmsg.ini,
+/data/server/php-7.1.5/etc/php.d/sysvsem.ini,
+/data/server/php-7.1.5/etc/php.d/sysvshm.ini,
+/data/server/php-7.1.5/etc/php.d/tokenizer.ini,
+/data/server/php-7.1.5/etc/php.d/wddx.ini,
+/data/server/php-7.1.5/etc/php.d/xml.ini,
+/data/server/php-7.1.5/etc/php.d/xmlreader.ini,
+/data/server/php-7.1.5/etc/php.d/xmlrpc.ini,
+/data/server/php-7.1.5/etc/php.d/xmlwriter.ini,
+/data/server/php-7.1.5/etc/php.d/xsl.ini,
+/data/server/php-7.1.5/etc/php.d/zip.ini
 
 PHP API => 20160303
 PHP Extension => 20160303
 Zend Extension => 320160303
-Zend Extension Build => API320160303,NTS
-PHP Extension Build => API20160303,NTS
+Zend Extension Build => API320160303,TS
+PHP Extension Build => API20160303,TS
 Debug Build => no
-Thread Safety => disabled
+Thread Safety => enabled
 Zend Signal Handling => enabled
 Zend Memory Manager => enabled
 Zend Multibyte Support => provided by mbstring
 IPv6 Support => enabled
 DTrace Support => disabled
 
-Registered PHP Streams => https, ftps, compress.zlib, compress.bzip2, php, file, glob, data, http, ftp, phar, zip
+Registered PHP Streams => https, ftps, compress.zlib, php, file, glob, data, http, ftp, compress.bzip2, phar, zip
 Registered Stream Socket Transports => tcp, udp, unix, udg, ssl, sslv3, tls, tlsv1.0, tlsv1.1, tlsv1.2
-Registered Stream Filters => zlib.*, bzip2.*, convert.iconv.*, mcrypt.*, mdecrypt.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk
+Registered Stream Filters => zlib.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, bzip2.*, convert.iconv.*, mcrypt.*, mdecrypt.*
 
 This program makes use of the Zend Scripting Language Engine:
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
@@ -54,7 +96,7 @@ bz2
 BZip2 Support => Enabled
 Stream Wrapper support => compress.bzip2://
 Stream Filter support => bzip2.decompress, bzip2.compress
-BZip2 Version => 1.0.6, 6-Sept-2010
+BZip2 Version => 1.0.5, 10-Dec-2007
 
 calendar
 
@@ -89,7 +131,7 @@ error_log => no value => no value
 error_prepend_string => no value => no value
 error_reporting => 22527 => 22527
 expose_php => On => On
-extension_dir => /usr/lib/php/extensions/no-debug-non-zts-20160303 => /usr/lib/php/extensions/no-debug-non-zts-20160303
+extension_dir => /data/server/php-7.1.5/lib/php/20160303-zts => /data/server/php-7.1.5/lib/php/20160303-zts
 file_uploads => On => On
 hard_timeout => 2 => 2
 highlight.comment => <font style="color: #FF8000">#FF8000</font> => <font style="color: #FF8000">#FF8000</font>
@@ -102,7 +144,7 @@ ignore_repeated_errors => Off => Off
 ignore_repeated_source => Off => Off
 ignore_user_abort => Off => Off
 implicit_flush => On => On
-include_path => .:/usr/lib/php => .:/usr/lib/php
+include_path => .:/data/server/php-7.1.5/share/pear => .:/data/server/php-7.1.5/share/pear
 input_encoding => no value => no value
 internal_encoding => no value => no value
 log_errors => On => On
@@ -160,10 +202,10 @@ ctype functions => enabled
 curl
 
 cURL support => enabled
-cURL Information => 7.29.0
+cURL Information => 7.19.7
 Age => 3
 Features
-AsynchDNS => Yes
+AsynchDNS => No
 CharConv => No
 Debug => No
 GSS-Negotiate => Yes
@@ -173,16 +215,14 @@ krb4 => No
 Largefile => Yes
 libz => Yes
 NTLM => Yes
-NTLMWB => Yes
 SPNEGO => No
 SSL => Yes
 SSPI => No
-TLS-SRP => No
-Protocols => dict, file, ftp, ftps, gopher, http, https, imap, imaps, ldap, ldaps, pop3, pop3s, rtsp, scp, sftp, smtp, smtps, telnet, tftp
+Protocols => tftp, ftp, telnet, dict, ldap, ldaps, http, file, https, ftps, scp, sftp
 Host => x86_64-redhat-linux-gnu
-SSL Version => NSS/3.21 Basic ECC
-ZLib Version => 1.2.7
-libSSH Version => libssh2/1.4.3
+SSL Version => NSS/3.27.1
+ZLib Version => 1.2.3
+libSSH Version => libssh2/1.4.2
 
 date
 
@@ -198,11 +238,19 @@ date.sunrise_zenith => 90.583333 => 90.583333
 date.sunset_zenith => 90.583333 => 90.583333
 date.timezone => no value => no value
 
+dba
+
+DBA support => enabled
+Supported handlers => cdb cdb_make inifile flatfile 
+
+Directive => Local Value => Master Value
+dba.default_handler => flatfile => flatfile
+
 dom
 
 DOM/XML => enabled
 DOM/XML API Version => 20031129
-libxml Version => 2.9.1
+libxml Version => 2.7.6
 HTML Support => enabled
 XPath Support => enabled
 XPointer Support => enabled
@@ -248,13 +296,18 @@ gd
 
 GD Support => enabled
 GD Version => bundled (2.1.0 compatible)
+FreeType Support => enabled
+FreeType Linkage => with freetype
+FreeType Version => 2.3.11
 GIF Read Support => enabled
 GIF Create Support => enabled
 JPEG Support => enabled
 libJPEG Version => 6b
 PNG Support => enabled
-libPNG Version => 1.5.13
+libPNG Version => 1.2.49
 WBMP Support => enabled
+XPM Support => enabled
+libXpm Version => 30411
 XBM Support => enabled
 
 Directive => Local Value => Master Value
@@ -267,23 +320,68 @@ GetText Support => enabled
 gmp
 
 gmp support => enabled
-GMP version => 6.0.0
+GMP version => 4.3.1
 
 hash
 
 hash support => enabled
 Hashing Engines => md2 md4 md5 sha1 sha224 sha256 sha384 sha512/224 sha512/256 sha512 sha3-224 sha3-256 sha3-384 sha3-512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost gost-crypto adler32 crc32 crc32b fnv132 fnv1a32 fnv164 fnv1a64 joaat haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5 
 
+MHASH support => Enabled
+MHASH API Version => Emulated Support
+
 iconv
 
 iconv support => enabled
 iconv implementation => glibc
-iconv library version => 1.15
+iconv library version => 2.12
 
 Directive => Local Value => Master Value
 iconv.input_encoding => no value => no value
 iconv.internal_encoding => no value => no value
 iconv.output_encoding => no value => no value
+
+igbinary
+
+igbinary support => enabled
+igbinary version => 2.0.1
+igbinary APC serializer ABI => no
+igbinary session support => yes
+
+Directive => Local Value => Master Value
+igbinary.compact_strings => On => On
+
+imagick
+
+imagick module => enabled
+imagick module version => 3.4.3
+imagick classes => Imagick, ImagickDraw, ImagickPixel, ImagickPixelIterator
+Imagick compiled with ImageMagick version => ImageMagick 6.7.2-7 2017-03-22 Q16 http://www.imagemagick.org
+Imagick using ImageMagick library version => ImageMagick 6.7.2-7 2017-03-22 Q16 http://www.imagemagick.org
+ImageMagick copyright => Copyright (C) 1999-2011 ImageMagick Studio LLC
+ImageMagick release date => 2017-03-22
+ImageMagick number of supported formats:  => 205
+ImageMagick supported formats => 3FR, A, AAI, AI, ART, ARW, AVI, AVS, B, BGR, BGRA, BMP, BMP2, BMP3, BRF, C, CAL, CALS, CANVAS, CAPTION, CIN, CIP, CLIP, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DFONT, DNG, DOT, DPX, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EPT2, EPT3, ERF, EXR, FAX, FITS, FRACTAL, FTS, G, G3, GIF, GIF87, GRADIENT, GRAY, GROUP4, HALD, HDR, HISTOGRAM, HRZ, HTM, HTML, ICB, ICO, ICON, INFO, INLINE, IPL, ISOBRL, J2C, JNG, JP2, JPC, JPEG, JPG, JPX, K, K25, KDC, LABEL, M, M2V, M4V, MAC, MAP, MAT, MATTE, MIFF, MNG, MONO, MOV, MP4, MPC, MPEG, MPG, MRW, MSL, MSVG, MTV, MVG, NEF, NULL, O, ORF, OTB, OTF, PAL, PALM, PAM, PATTERN, PBM, PCD, PCDS, PCL, PCT, PCX, PDB, PDF, PDFA, PEF, PES, PFA, PFB, PFM, PGM, PGX, PICON, PICT, PIX, PJPEG, PLASMA, PNG, PNG24, PNG32, PNG8, PNM, PPM, PREVIEW, PS, PS2, PS3, PSB, PSD, PTIF, PWP, R, RADIAL-GRADIENT, RAF, RAS, RGB, RGBA, RGBO, RLA, RLE, SCR, SCT, SFW, SGI, SHTML, SR2, SRF, STEGANO, SUN, SVG, SVGZ, TEXT, TGA, THUMBNAIL, TIFF, TIFF64, TILE, TIM, TTC, TTF, TXT, UBRL, UIL, UYVY, VDA, VICAR, VID, VIFF, VST, WBMP, WMF, WMV, WMZ, WPG, X, X3F, XBM, XC, XCF, XPM, XPS, XV, XWD, Y, YCbCr, YCbCrA, YUV
+
+Directive => Local Value => Master Value
+imagick.locale_fix => 0 => 0
+imagick.progress_monitor => 0 => 0
+imagick.skip_version_check => 0 => 0
+
+inotify
+
+Version => 2.0.0
+
+intl
+
+Internationalization support => enabled
+version => 1.1.0
+ICU version => 4.2.1
+
+Directive => Local Value => Master Value
+intl.default_locale => no value => no value
+intl.error_level => 0 => 0
+intl.use_exceptions => 0 => 0
 
 json
 
@@ -293,8 +391,8 @@ json version => 1.5.0
 libxml
 
 libXML support => active
-libXML Compiled Version => 2.9.1
-libXML Loaded Version => 20901
+libXML Compiled Version => 2.7.6
+libXML Loaded Version => 20706
 libXML streams => enabled
 
 mbstring
@@ -350,7 +448,7 @@ mysqli.allow_persistent => On => On
 mysqli.default_host => no value => no value
 mysqli.default_port => 3306 => 3306
 mysqli.default_pw => no value => no value
-mysqli.default_socket => no value => no value
+mysqli.default_socket => /var/lib/mysql/mysql.sock => /var/lib/mysql/mysql.sock
 mysqli.default_user => no value => no value
 mysqli.max_links => Unlimited => Unlimited
 mysqli.max_persistent => Unlimited => Unlimited
@@ -371,7 +469,7 @@ Collecting statistics => Yes
 Collecting memory statistics => No
 Tracing => n/a
 Loaded plugins => mysqlnd,debug_trace,auth_plugin_mysql_native_password,auth_plugin_mysql_clear_password,auth_plugin_sha256_password
-API Extensions => pdo_mysql,mysqli
+API Extensions => mysqli,pdo_mysql
 
 mysqlnd statistics =>  
 bytes_sent => 0
@@ -575,12 +673,12 @@ PDO Driver for MySQL => enabled
 Client API version => mysqlnd 5.0.12-dev - 20150407 - $Id: b396954eeb2d1d9ed7902b8bae237b287f21ad9e $
 
 Directive => Local Value => Master Value
-pdo_mysql.default_socket => /tmp/mysql.sock => /tmp/mysql.sock
+pdo_mysql.default_socket => /var/lib/mysql/mysql.sock => /var/lib/mysql/mysql.sock
 
 pdo_sqlite
 
 PDO Driver for SQLite 3.x => enabled
-SQLite Library => 3.15.1
+SQLite Library => 3.6.20
 
 Phar
 
@@ -611,11 +709,22 @@ Revision => $Id: b691ca925e7a085e6929579c4eba8fed0732e0ef $
 readline
 
 Readline Support => enabled
-Readline library => 6.2
+Readline library => 6.0
 
 Directive => Local Value => Master Value
 cli.pager => no value => no value
 cli.prompt => \b \>  => \b \> 
+
+recode
+
+Recode Support => enabled
+Revision => $Id: e175cff622634146da7151369502cde27702683e $
+
+redis
+
+Redis Support => enabled
+Redis Version => 3.1.2
+Available serializers => php
 
 Reflection
 
@@ -625,8 +734,8 @@ Version => $Id: a06522d025b0af3e6ba10a0f6964086b7e6f5458 $
 session
 
 Session Support => enabled
-Registered save handlers => files user 
-Registered serializer handlers => php_serialize php php_binary wddx 
+Registered save handlers => files user redis rediscluster 
+Registered serializer handlers => php_serialize php php_binary igbinary wddx 
 
 Directive => Local Value => Master Value
 session.auto_start => Off => Off
@@ -695,7 +804,7 @@ sqlite3
 
 SQLite3 support => enabled
 SQLite3 module version => 0.7-dev
-SQLite Library => 3.15.1
+SQLite Library => 3.6.20
 
 Directive => Local Value => Master Value
 sqlite3.extension_dir => no value => no value
@@ -747,7 +856,7 @@ xml
 
 XML Support => active
 XML Namespace Support => active
-libxml2 Version => 2.9.1
+libxml2 Version => 2.7.6
 
 xmlreader
 
@@ -768,10 +877,10 @@ XMLWriter => enabled
 xsl
 
 XSL => enabled
-libxslt Version => 1.1.28
-libxslt compiled against libxml Version => 2.9.1
+libxslt Version => 1.1.26
+libxslt compiled against libxml Version => 2.7.6
 EXSLT => enabled
-libexslt Version => 1.1.28
+libexslt Version => 1.1.26
 
 Zend OPcache
 
@@ -783,11 +892,9 @@ Startup => OK
 Shared memory model => mmap
 Cache hits => 0
 Cache misses => 0
-Used memory => 18734928
-Free memory => 115482800
+Used memory => 909136
+Free memory => 133308592
 Wasted memory => 0
-Interned Strings Used memory => 239536
-Interned Strings Free memory => 8149072
 Cached scripts => 0
 Cached keys => 0
 Max keys => 16229
@@ -842,8 +949,8 @@ zlib
 ZLib Support => enabled
 Stream Wrapper => compress.zlib://
 Stream Filter => zlib.inflate, zlib.deflate
-Compiled Version => 1.2.7
-Linked Version => 1.2.7
+Compiled Version => 1.2.3
+Linked Version => 1.2.3
 
 Directive => Local Value => Master Value
 zlib.output_compression => Off => Off
@@ -858,30 +965,36 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => 06d4171266bb
+HOSTNAME => e2f8b8dbe9d4
+SRC_DIR => /data/server/src
 PHP_VERSION => 7.1.5
-PHP_PREFIX => /usr
-PHP_CONFIG_FILE_PATH => /etc
-PECL => /usr/bin/pecl
+HTTPD_VERSION => 2.4.25
+HTTPD_PREFIX => /data/server/httpd-2.4.25
+PHP_PREFIX => /data/server/php-7.1.5
+PHP_CONFIG_FILE_PATH => /data/server/php-7.1.5/etc
+PECL => /data/server/php-7.1.5/bin/pecl
 HOME => /root
 
 PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => 06d4171266bb
+$_SERVER['HOSTNAME'] => e2f8b8dbe9d4
+$_SERVER['SRC_DIR'] => /data/server/src
 $_SERVER['PHP_VERSION'] => 7.1.5
-$_SERVER['PHP_PREFIX'] => /usr
-$_SERVER['PHP_CONFIG_FILE_PATH'] => /etc
-$_SERVER['PECL'] => /usr/bin/pecl
+$_SERVER['HTTPD_VERSION'] => 2.4.25
+$_SERVER['HTTPD_PREFIX'] => /data/server/httpd-2.4.25
+$_SERVER['PHP_PREFIX'] => /data/server/php-7.1.5
+$_SERVER['PHP_CONFIG_FILE_PATH'] => /data/server/php-7.1.5/etc
+$_SERVER['PECL'] => /data/server/php-7.1.5/bin/pecl
 $_SERVER['HOME'] => /root
 $_SERVER['PHP_SELF'] => 
 $_SERVER['SCRIPT_NAME'] => 
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495273587.872
-$_SERVER['REQUEST_TIME'] => 1495273587
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495696407.4496
+$_SERVER['REQUEST_TIME'] => 1495696407
 $_SERVER['argv'] => Array
 (
 )

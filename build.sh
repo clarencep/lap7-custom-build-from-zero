@@ -1,11 +1,20 @@
 #!/bin/sh -xe
 
-IMAGE_NAME=lap7-custom-build-from-zero
+REPO_NAME=lap7-custom-build-from-zero
+REPO_BRANCH=master
+REPO_USER=clarencep
 
-docker build -t clarencep/$IMAGE_NAME .
+IMAGE_NAME=$REPO_USER/$REPO_NAME:$REPO_BRANCH
 
+if [ "$REPO_BRANCH" == "master" ]; then
+    IMAGE_NAME=$REPO_USER/$REPO_NAME:latest
+fi;
 
-docker run --rm clarencep/$IMAGE_NAME sh -c '\
+docker build -t $IMAGE_NAME .
+
+cat ./check-extensions.php | docker run -i --rm $IMAGE_NAME php
+
+docker run --rm $IMAGE_NAME sh -c '\
     echo ""; \
     echo OS Version; \
     echo --------------; \
@@ -19,6 +28,7 @@ docker run --rm clarencep/$IMAGE_NAME sh -c '\
     echo --------------; \
     php -m;' > versions.txt
 
-docker run --rm clarencep/$IMAGE_NAME php -i > phpinfo.txt
+docker run --rm $IMAGE_NAME php -i > phpinfo.txt
 
 
+echo "All done."
