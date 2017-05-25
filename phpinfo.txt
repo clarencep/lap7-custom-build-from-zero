@@ -1,8 +1,8 @@
 phpinfo()
 PHP Version => 7.1.5
 
-System => Linux e2f8b8dbe9d4 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
-Build Date => May 25 2017 07:07:08
+System => Linux adda6e5d8583 4.9.13-moby #1 SMP Sat Mar 25 02:48:44 UTC 2017 x86_64
+Build Date => May 25 2017 09:34:32
 Configure Command =>  './configure'  '--prefix=/data/server/php-7.1.5' '--with-config-file-path=/data/server/php-7.1.5/etc' '--with-config-file-scan-dir=/data/server/php-7.1.5/etc/php.d' '--with-apxs2=/data/server/httpd-2.4.25/bin/apxs' '--disable-debug' '--disable-phpdbg' '--with-pic' '--disable-rpath' '--with-freetype-dir=/usr' '--with-png-dir=/usr' '--with-xpm-dir=/usr' '--enable-gd-native-ttf' '--with-t1lib=/usr' '--without-gdbm' '--with-jpeg-dir=/usr' '--with-openssl' '--with-pcre-regex' '--with-zlib' '--with-layout=GNU' '--with-kerberos' '--with-libxml-dir=/usr' '--with-system-tzdata' '--with-mhash' '--enable-force-cgi-redirect' '--enable-pcntl' '--enable-fastcgi' '--enable-mbstring=shared' '--enable-mbregex' '--with-gd=shared' '--with-gmp=shared' '--enable-calendar=shared' '--enable-bcmath=shared' '--with-bz2=shared' '--enable-ctype=shared' '--enable-dba=shared' '--enable-exif=shared' '--enable-ftp=shared' '--with-gettext=shared' '--with-iconv=shared' '--enable-sockets=shared' '--enable-tokenizer=shared' '--with-xmlrpc=shared' '--enable-dom=shared' '--enable-simplexml=shared' '--enable-xml=shared' '--enable-wddx=shared' '--enable-soap=shared' '--with-xsl=shared,/usr' '--enable-xmlreader=shared' '--enable-xmlwriter=shared' '--with-curl=shared,/usr' '--enable-mysqlnd=shared' '--with-mysqli=shared,mysqlnd' '--with-mysql-sock=/var/lib/mysql/mysql.sock' '--enable-pdo=shared' '--with-pdo-mysql=shared,mysqlnd' '--with-pdo-sqlite=shared,/usr' '--with-sqlite3=shared,/usr' '--enable-json=shared' '--enable-zip=shared' '--enable-phar=shared' '--with-mcrypt=shared,/usr' '--enable-sysvmsg=shared' '--enable-sysvshm=shared' '--enable-sysvsem=shared' '--enable-shmop=shared' '--enable-posix=shared' '--enable-intl=shared' '--with-recode=shared,/usr' '--with-readline=shared' '--enable-opcache'
 Server API => Command Line Interface
 Virtual Directory Support => enabled
@@ -96,7 +96,7 @@ bz2
 BZip2 Support => Enabled
 Stream Wrapper support => compress.bzip2://
 Stream Filter support => bzip2.decompress, bzip2.compress
-BZip2 Version => 1.0.5, 10-Dec-2007
+BZip2 Version => 1.0.6, 6-Sept-2010
 
 calendar
 
@@ -202,10 +202,10 @@ ctype functions => enabled
 curl
 
 cURL support => enabled
-cURL Information => 7.19.7
+cURL Information => 7.29.0
 Age => 3
 Features
-AsynchDNS => No
+AsynchDNS => Yes
 CharConv => No
 Debug => No
 GSS-Negotiate => Yes
@@ -215,14 +215,16 @@ krb4 => No
 Largefile => Yes
 libz => Yes
 NTLM => Yes
+NTLMWB => Yes
 SPNEGO => No
 SSL => Yes
 SSPI => No
-Protocols => tftp, ftp, telnet, dict, ldap, ldaps, http, file, https, ftps, scp, sftp
+TLS-SRP => No
+Protocols => dict, file, ftp, ftps, gopher, http, https, imap, imaps, ldap, ldaps, pop3, pop3s, rtsp, scp, sftp, smtp, smtps, telnet, tftp
 Host => x86_64-redhat-linux-gnu
-SSL Version => NSS/3.27.1
-ZLib Version => 1.2.3
-libSSH Version => libssh2/1.4.2
+SSL Version => NSS/3.21 Basic ECC
+ZLib Version => 1.2.7
+libSSH Version => libssh2/1.4.3
 
 date
 
@@ -250,7 +252,7 @@ dom
 
 DOM/XML => enabled
 DOM/XML API Version => 20031129
-libxml Version => 2.7.6
+libxml Version => 2.9.1
 HTML Support => enabled
 XPath Support => enabled
 XPointer Support => enabled
@@ -298,13 +300,13 @@ GD Support => enabled
 GD Version => bundled (2.1.0 compatible)
 FreeType Support => enabled
 FreeType Linkage => with freetype
-FreeType Version => 2.3.11
+FreeType Version => 2.4.11
 GIF Read Support => enabled
 GIF Create Support => enabled
 JPEG Support => enabled
 libJPEG Version => 6b
 PNG Support => enabled
-libPNG Version => 1.2.49
+libPNG Version => 1.5.13
 WBMP Support => enabled
 XPM Support => enabled
 libXpm Version => 30411
@@ -320,7 +322,7 @@ GetText Support => enabled
 gmp
 
 gmp support => enabled
-GMP version => 4.3.1
+GMP version => 6.0.0
 
 hash
 
@@ -334,7 +336,7 @@ iconv
 
 iconv support => enabled
 iconv implementation => glibc
-iconv library version => 2.12
+iconv library version => 2.17
 
 Directive => Local Value => Master Value
 iconv.input_encoding => no value => no value
@@ -356,12 +358,12 @@ imagick
 imagick module => enabled
 imagick module version => 3.4.3
 imagick classes => Imagick, ImagickDraw, ImagickPixel, ImagickPixelIterator
-Imagick compiled with ImageMagick version => ImageMagick 6.7.2-7 2017-03-22 Q16 http://www.imagemagick.org
-Imagick using ImageMagick library version => ImageMagick 6.7.2-7 2017-03-22 Q16 http://www.imagemagick.org
-ImageMagick copyright => Copyright (C) 1999-2011 ImageMagick Studio LLC
-ImageMagick release date => 2017-03-22
-ImageMagick number of supported formats:  => 205
-ImageMagick supported formats => 3FR, A, AAI, AI, ART, ARW, AVI, AVS, B, BGR, BGRA, BMP, BMP2, BMP3, BRF, C, CAL, CALS, CANVAS, CAPTION, CIN, CIP, CLIP, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DFONT, DNG, DOT, DPX, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EPT2, EPT3, ERF, EXR, FAX, FITS, FRACTAL, FTS, G, G3, GIF, GIF87, GRADIENT, GRAY, GROUP4, HALD, HDR, HISTOGRAM, HRZ, HTM, HTML, ICB, ICO, ICON, INFO, INLINE, IPL, ISOBRL, J2C, JNG, JP2, JPC, JPEG, JPG, JPX, K, K25, KDC, LABEL, M, M2V, M4V, MAC, MAP, MAT, MATTE, MIFF, MNG, MONO, MOV, MP4, MPC, MPEG, MPG, MRW, MSL, MSVG, MTV, MVG, NEF, NULL, O, ORF, OTB, OTF, PAL, PALM, PAM, PATTERN, PBM, PCD, PCDS, PCL, PCT, PCX, PDB, PDF, PDFA, PEF, PES, PFA, PFB, PFM, PGM, PGX, PICON, PICT, PIX, PJPEG, PLASMA, PNG, PNG24, PNG32, PNG8, PNM, PPM, PREVIEW, PS, PS2, PS3, PSB, PSD, PTIF, PWP, R, RADIAL-GRADIENT, RAF, RAS, RGB, RGBA, RGBO, RLA, RLE, SCR, SCT, SFW, SGI, SHTML, SR2, SRF, STEGANO, SUN, SVG, SVGZ, TEXT, TGA, THUMBNAIL, TIFF, TIFF64, TILE, TIM, TTC, TTF, TXT, UBRL, UIL, UYVY, VDA, VICAR, VID, VIFF, VST, WBMP, WMF, WMV, WMZ, WPG, X, X3F, XBM, XC, XCF, XPM, XPS, XV, XWD, Y, YCbCr, YCbCrA, YUV
+Imagick compiled with ImageMagick version => ImageMagick 6.7.8-9 2016-06-16 Q16 http://www.imagemagick.org
+Imagick using ImageMagick library version => ImageMagick 6.7.8-9 2016-06-16 Q16 http://www.imagemagick.org
+ImageMagick copyright => Copyright (C) 1999-2012 ImageMagick Studio LLC
+ImageMagick release date => 2016-06-16
+ImageMagick number of supported formats:  => 209
+ImageMagick supported formats => 3FR, A, AAI, AI, ART, ARW, AVI, AVS, B, BGR, BGRA, BMP, BMP2, BMP3, BRF, C, CAL, CALS, CANVAS, CAPTION, CIN, CIP, CLIP, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DFONT, DNG, DOT, DPX, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EPT2, EPT3, ERF, EXR, FAX, FITS, FRACTAL, FTS, G, G3, GIF, GIF87, GRADIENT, GRAY, GROUP4, HALD, HDR, HISTOGRAM, HRZ, HTM, HTML, ICB, ICO, ICON, INFO, INLINE, IPL, ISOBRL, J2C, J2K, JNG, JP2, JPC, JPEG, JPG, JPX, K, K25, KDC, LABEL, M, M2V, M4V, MAC, MAP, MAT, MATTE, MEF, MIFF, MNG, MONO, MOV, MP4, MPC, MPEG, MPG, MRW, MSL, MSVG, MTV, MVG, NEF, NRW, NULL, O, ORF, OTB, OTF, PAL, PALM, PAM, PANGO, PATTERN, PBM, PCD, PCDS, PCL, PCT, PCX, PDB, PDF, PDFA, PEF, PES, PFA, PFB, PFM, PGM, PGX, PICON, PICT, PIX, PJPEG, PLASMA, PNG, PNG24, PNG32, PNG8, PNM, PPM, PREVIEW, PS, PS2, PS3, PSB, PSD, PTIF, PWP, R, RADIAL-GRADIENT, RAF, RAS, RGB, RGBA, RGBO, RLA, RLE, SCR, SCT, SFW, SGI, SHTML, SR2, SRF, STEGANO, SUN, SVG, SVGZ, TEXT, TGA, THUMBNAIL, TIFF, TIFF64, TILE, TIM, TTC, TTF, TXT, UBRL, UIL, UYVY, VDA, VICAR, VID, VIFF, VST, WBMP, WMF, WMV, WMZ, WPG, X, X3F, XBM, XC, XCF, XPM, XPS, XV, XWD, Y, YCbCr, YCbCrA, YUV
 
 Directive => Local Value => Master Value
 imagick.locale_fix => 0 => 0
@@ -376,7 +378,8 @@ intl
 
 Internationalization support => enabled
 version => 1.1.0
-ICU version => 4.2.1
+ICU version => 50.1.2
+ICU Data version => 50.1
 
 Directive => Local Value => Master Value
 intl.default_locale => no value => no value
@@ -391,8 +394,8 @@ json version => 1.5.0
 libxml
 
 libXML support => active
-libXML Compiled Version => 2.7.6
-libXML Loaded Version => 20706
+libXML Compiled Version => 2.9.1
+libXML Loaded Version => 20901
 libXML streams => enabled
 
 mbstring
@@ -678,7 +681,7 @@ pdo_mysql.default_socket => /var/lib/mysql/mysql.sock => /var/lib/mysql/mysql.so
 pdo_sqlite
 
 PDO Driver for SQLite 3.x => enabled
-SQLite Library => 3.6.20
+SQLite Library => 3.7.17
 
 Phar
 
@@ -709,7 +712,7 @@ Revision => $Id: b691ca925e7a085e6929579c4eba8fed0732e0ef $
 readline
 
 Readline Support => enabled
-Readline library => 6.0
+Readline library => 6.2
 
 Directive => Local Value => Master Value
 cli.pager => no value => no value
@@ -804,7 +807,7 @@ sqlite3
 
 SQLite3 support => enabled
 SQLite3 module version => 0.7-dev
-SQLite Library => 3.6.20
+SQLite Library => 3.7.17
 
 Directive => Local Value => Master Value
 sqlite3.extension_dir => no value => no value
@@ -856,7 +859,7 @@ xml
 
 XML Support => active
 XML Namespace Support => active
-libxml2 Version => 2.7.6
+libxml2 Version => 2.9.1
 
 xmlreader
 
@@ -877,10 +880,10 @@ XMLWriter => enabled
 xsl
 
 XSL => enabled
-libxslt Version => 1.1.26
-libxslt compiled against libxml Version => 2.7.6
+libxslt Version => 1.1.28
+libxslt compiled against libxml Version => 2.9.1
 EXSLT => enabled
-libexslt Version => 1.1.26
+libexslt Version => 1.1.28
 
 Zend OPcache
 
@@ -949,8 +952,8 @@ zlib
 ZLib Support => enabled
 Stream Wrapper => compress.zlib://
 Stream Filter => zlib.inflate, zlib.deflate
-Compiled Version => 1.2.3
-Linked Version => 1.2.3
+Compiled Version => 1.2.7
+Linked Version => 1.2.7
 
 Directive => Local Value => Master Value
 zlib.output_compression => Off => Off
@@ -965,36 +968,22 @@ Environment
 
 Variable => Value
 PATH => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-HOSTNAME => e2f8b8dbe9d4
-SRC_DIR => /data/server/src
-PHP_VERSION => 7.1.5
-HTTPD_VERSION => 2.4.25
-HTTPD_PREFIX => /data/server/httpd-2.4.25
-PHP_PREFIX => /data/server/php-7.1.5
-PHP_CONFIG_FILE_PATH => /data/server/php-7.1.5/etc
-PECL => /data/server/php-7.1.5/bin/pecl
+HOSTNAME => adda6e5d8583
 HOME => /root
 
 PHP Variables
 
 Variable => Value
 $_SERVER['PATH'] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-$_SERVER['HOSTNAME'] => e2f8b8dbe9d4
-$_SERVER['SRC_DIR'] => /data/server/src
-$_SERVER['PHP_VERSION'] => 7.1.5
-$_SERVER['HTTPD_VERSION'] => 2.4.25
-$_SERVER['HTTPD_PREFIX'] => /data/server/httpd-2.4.25
-$_SERVER['PHP_PREFIX'] => /data/server/php-7.1.5
-$_SERVER['PHP_CONFIG_FILE_PATH'] => /data/server/php-7.1.5/etc
-$_SERVER['PECL'] => /data/server/php-7.1.5/bin/pecl
+$_SERVER['HOSTNAME'] => adda6e5d8583
 $_SERVER['HOME'] => /root
 $_SERVER['PHP_SELF'] => 
 $_SERVER['SCRIPT_NAME'] => 
 $_SERVER['SCRIPT_FILENAME'] => 
 $_SERVER['PATH_TRANSLATED'] => 
 $_SERVER['DOCUMENT_ROOT'] => 
-$_SERVER['REQUEST_TIME_FLOAT'] => 1495696407.4496
-$_SERVER['REQUEST_TIME'] => 1495696407
+$_SERVER['REQUEST_TIME_FLOAT'] => 1495705558.2786
+$_SERVER['REQUEST_TIME'] => 1495705558
 $_SERVER['argv'] => Array
 (
 )
