@@ -30,8 +30,4 @@ docker run --rm $IMAGE_NAME sh -c '\
 
 docker run --rm $IMAGE_NAME php -i > phpinfo.txt
 
-git add -A .
-git commit . -m "update builds"
-git push origin $REPO_BRANCH
-
 echo "All done."
