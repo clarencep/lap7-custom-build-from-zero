@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-PHP_VERSION=7.1.5
+PHP_VERSION=7.1.7
 HTTPD_VERSION=2.4.25
 
 LIBICONV_VERSION=1.15
@@ -258,3 +258,4 @@ httpd -v
 
 # test php version 
 php -v && php -m | sort
+
